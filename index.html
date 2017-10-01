@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- jQuery CDN -->
+        <script   src="https://code.jquery.com/jquery-3.2.1.js"   
+        integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+        <title>Giphy Project: Evgheni Pascalov</title>
+        <!-- Reset style sheet-->
+        <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+        <!-- Bootstrap CDN -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <!-- Final stle sheet-->
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+    </head>
+
+    <body>
+
+        <nav id="nav" class="navbar navbar-default">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="">Evgheni Pascalov</a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="index.html">About</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container -->
+        </nav>
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-md-12" id="dropdowns">
+
+                    <div class="dropdown pull-left">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Movies
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                            <button class="dropdown-item" type="button">Gladiator</button>
+                            <button class="dropdown-item" type="button">Terminator</button>
+                            <button class="dropdown-item" type="button">Mask</button>
+                        </div>
+                    </div>
+
+                    <div class="dropdown pull-left">
+                        <button class="btn btn-secondary dropdown-toggle pull-right" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Animals
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                            <button class="dropdown-item" type="button">Dogs</button>
+                            <button class="dropdown-item" type="button">Cats</button>
+                            <button class="dropdown-item" type="button">Elephants</button>
+                        </div>
+                    </div>
+
+                    <div class="dropdown pull-left">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            TV Shows
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                            <button class="dropdown-item" type="button">Seinfeld</button>
+                            <button class="dropdown-item" type="button">Friends</button>
+                            <button class="dropdown-item" type="button">Frasier</button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-lg-12 " id="searchLines">
+                    <form>
+                        <div class="form-group pull-right form-inline col-md-6 text-center">
+                            <label class="text-center">Add a dropdown</label>
+                            </br>
+                            <input type="text" class="form-control" id="newDropdown" placeholder="Type new dropdown">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                        <div class="form-group pull-right form-inline col-md-6 text-center">
+                            <label class="text-center">Add a search criteria</label>
+                            </br>
+                            <input type="text" class="form-control" id="newSearchValue" placeholder="Type new value">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                    </form>
+
+                </div>
+
+
+
+
+            </div><!-- row ends -->
+
+        </div><!-- container ends -->
+
+
+        <div class="container">
+
+            <div class="row">
+
+            </div>
+            <div class="push"></div>
+        </div>
+
+        <footer class="footer">
+
+            <p class="text-center" id="footerText">&copy; Copyright 2017 Evgheni Pascalov</p>
+
+        </footer>
+
+        <script src="assets/javascript/game.js"></script>
+        <!-- Bootstrap JavaScript CDN -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="assets/javascript/app.js"></script>
+
+    </body>
+
+</html>
