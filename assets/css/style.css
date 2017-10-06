@@ -1,28 +1,50 @@
+
+
+html { 
+    height: 100%; 
+}
+
 body {
-    background: #DEF2F1;
+    background: rgb(87, 82, 126);
+    min-height:100%; 
+    position: relative; 
+    padding-bottom: 80px;
 }
 
 footer {
     margin-top: 2%;
-    background: rgb(248, 248,248);
+    background: rgb(150, 193, 211);
     position: absolute;
-    bottom: 0;
-    min-height: 50px;  
-    width: 100%;
+    left: 0 ; right: 0; bottom: 0; 
+    height: -80px;
 }
 
 #footerText {
     padding-top: 1%;
+
 }
 
-#dropdowns {
-      padding-top: 2%;
+.form-control {
+    margin-bottom: 5px;
 }
-
 .dropdown {
     margin-left: 2%;
 }
 
 #searchLines {
-    padding-top: 5%;
+    padding-top: 1%;
 }
+
+.btn {
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+
+.img-responsive {
+    width: 300px;
+    height: 300px;
+    border: 15px solid #3e2b14;
+    padding: 10px;
+    border-radius: 5px;
+}
+
