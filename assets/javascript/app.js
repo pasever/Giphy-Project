@@ -5,7 +5,7 @@ var initButtons = ["Gladiator", "Terminator", "The Mask", "Dogs", "Cats", "Eleph
 $("#dropdowns").on("click", ".alert-info", function () {
     //empty the previous page 
     $("#gifsHolder").empty();
-    
+
     var criteria = $(this).attr("data-name");
     if (!criteria) {
         return;
@@ -41,7 +41,7 @@ $("#dropdowns").on("click", ".alert-info", function () {
                     var returnImage = $("<img>");
                     //Adding class 
                     returnImage.addClass("img-responsive");
-                    
+
                     //Pushing the results into the new function
                     attachListener(returnImage, results[i]);
 
@@ -61,8 +61,8 @@ function attachListener(image, result) {
     var moving = result.images.fixed_height.url;
 
     image.attr("src", moving);
-    
-    image.on("click", function(event) {
+
+    image.on("click", function (event) {
 
         if ($(this).attr("data-type") === "still") {
             $(this).attr("src", moving);
@@ -80,6 +80,7 @@ function attachListener(image, result) {
 function generateButtons() {
 
     $("#dropdowns").empty();
+    $("#gifsHolder").empty();
 
     // Looping through the array
     for (var i = 0; i < initButtons.length; i++) {
