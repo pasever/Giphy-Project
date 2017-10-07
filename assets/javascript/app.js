@@ -3,7 +3,9 @@ var userKey = "NwOEFoRmGeMy8WuTuMbyONhoM6zzspon";
 var initButtons = ["Gladiator", "Terminator", "The Mask", "Dogs", "Cats", "Elephants", "Seinfeld", "Friends", "Frasier", "Everybody Loves Raymond"];
 
 $("#dropdowns").on("click", ".alert-info", function () {
-
+    //empty the previous page 
+    $("#gifsHolder").empty();
+    
     var criteria = $(this).attr("data-name");
     if (!criteria) {
         return;
