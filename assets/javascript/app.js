@@ -37,11 +37,10 @@ $("#dropdowns").on("click", ".alert-info", function () {
 
                     // Creating and storing an image tag
                     var returnImage = $("<img>");
+                    //Adding class 
                     returnImage.addClass("img-responsive");
-                    // Setting the src attribute of the image to a property pulled off the result item
-                    //returnImage.attr("data-moving", results[i].images.fixed_height.url);
-                    //returnImage.attr("src", results[i].images.fixed_height_still.url);
-
+                    
+                    //Pushing the results into the new function
                     attachListener(returnImage, results[i]);
 
                     // Appending the paragraph and image tag to the animalDiv
@@ -60,8 +59,8 @@ function attachListener(image, result) {
     var moving = result.images.fixed_height.url;
 
     image.attr("src", moving);
-
-    image.on("click", function (event) {
+    
+    image.on("click", function(event) {
 
         if ($(this).attr("data-type") === "still") {
             $(this).attr("src", moving);
