@@ -12,17 +12,19 @@ $("#dropdowns").on("click", ".alert-info", function () {
     }
     //http://api.giphy.com/v1/gifs/search?q=kramer&api_key=NwOEFoRmGeMy8WuTuMbyONhoM6zzspon&limit=20
     var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
-            criteria + "&api_key=" + userKey;
+            criteria + "&api_key=" + userKey + "&limit=15";
 
     $.ajax({
         url: queryURL,
         method: "GET"
+
     })
             // After data comes back from the request
             .done(function (response) {
 
-                console.log(queryURL);
-                console.log(response);
+                //console.log(queryURL);
+                //console.log(response);
+                //(queryURL);
 
                 // storing the data from the AJAX request in the results variable
                 var results = response.data;
@@ -82,6 +84,7 @@ function generateButtons() {
     $("#dropdowns").empty();
     $("#gifsHolder").empty();
 
+
     // Looping through the array
     for (var i = 0; i < initButtons.length; i++) {
 
@@ -106,10 +109,32 @@ function generateButtons() {
 $("#searchButton").on("click", function (event) {
     event.preventDefault();
 
+
     var searchValue = $("#newSearchValue").val().trim();
+
+
+    if ($("#newSearchValue").val() === "") {
+        return;
+    } else {
+    
     initButtons.push(searchValue);
     generateButtons();
+
+    }
+
+    $("#newSearchValue").val("");
 });
+
+//$("#gifNumbers").on("click", function giphyNumbers(qty) {
+//    var tenGiphys = qty + "&limit=10";
+//    var tfiveGiphys = qty + "&limit=25";
+//    var fiftyGipys = qty + "&limit=50"; 
+//    
+//    
+//    
+//    
+//    
+//});
 
 generateButtons();
 
@@ -120,28 +145,3 @@ generateButtons();
 //        
 //        
 //       //http://api.giphy.com/v1/gifs/search?q=kramer&api_key=NwOEFoRmGeMy8WuTuMbyONhoM6zzspon&limit=20
-//
-//        $.ajax(
-//                {   
-//                    url: queryURL,
-//                    success: function (response) {
-//                        console.log(response.data);
-//                        console.log(response.data[0].images.downsized);
-//                        //console.log("http://api.giphy.com/v1/gifs/search?q=kramer&api_key=NwOEFoRmGeMy8WuTuMbyONhoM6zzspon&limit=20");
-//                        
-//                    }});
-//
-//
-//    });
-//    
-
-//// Generic function for capturing the movie name from the data-attribute
-//function buttonName() {
-//
-//    var x = $("button").attr("data-name");
-//    console.log(x);
-//
-//}
-//
-
-//        
